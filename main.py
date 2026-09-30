@@ -16,6 +16,7 @@ def initialiser_base_de_donnees():
     return db
 
 
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setApplicationName("EduPaie")
@@ -28,3 +29,7 @@ if __name__ == "__main__":
     code_retour = app.exec()
     db.close()
     sys.exit(code_retour)
+    
+    from src.data1.referentiel_repository import ReferentielRepository
+
+ReferentielRepository(db).initialiser()
