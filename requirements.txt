@@ -1,0 +1,3 @@
+PySide6
+fpdf2
+pyinstaller
