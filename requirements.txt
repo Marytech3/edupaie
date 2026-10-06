@@ -1,3 +1,2 @@
-PySide6
-fpdf2
-pyinstaller
+PySide6==6.11.2
+fpdf2==2.8.9

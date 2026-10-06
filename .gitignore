@@ -7,3 +7,6 @@ dist/
 receipts/*.pdf
 data/*.db-journal
 data/*.db-wal
+deployment/
+build/nuitka-cache/
+!pysidedeploy.spec

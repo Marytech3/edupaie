@@ -17,10 +17,10 @@ class EleveRepository:
             JOIN classes c ON c.id = e.classe_id
             JOIN annees_scolaires a ON a.id = e.annee_scolaire_id
             LEFT JOIN paiements p ON p.eleve_id = e.id
-            WHERE (e.nom LIKE ? OR e.prenom LIKE ?)
+            WHERE (e.nom LIKE ? OR e.prenom LIKE ? OR c.nom LIKE ?)
         """
 
-        params = [f"%{recherche}%", f"%{recherche}%"]
+        params = [f"%{recherche}%", f"%{recherche}%", f"%{recherche}%"]
 
         if classe_id:
             query += " AND e.classe_id = ?"
